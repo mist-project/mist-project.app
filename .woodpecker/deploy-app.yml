@@ -1,6 +1,6 @@
 when:
-  - event: [manual]
-  - branch: [main]
+  - event: [manual, push]
+  - branch: main
 
 steps:
   - name: Fetch and Initialize Credentials
