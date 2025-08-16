@@ -1,5 +1,7 @@
 import type { JSX } from "react";
 
+import architectureImage from "/src/assets/mist-project-arch.png";
+
 type StackCardProps = {
   title: string;
   description: string;
@@ -26,7 +28,7 @@ const Architecture = (): JSX.Element => {
         <div className="aspect-[16/9] w-fullgrid place-items-center">
           <div className="text-center">
             <img
-              src="/src/assets/mist-project-arch.png"
+              src={architectureImage}
               alt="Mist Project Architecture"
               className="max-w-full h-auto rounded"
             />
