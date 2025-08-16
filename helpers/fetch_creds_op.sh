@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# ---- TENANT ACCOUNT ----
 TENANT_USERNAME=$(op item get $TENANT_ACCOUNT_ID --vault "$OP_VAULT" --fields username)
 TENANT_PRIVATE_SSH_KEY=$(op item get $TENANT_ACCOUNT_ID --vault "$OP_VAULT" --fields "private key" --reveal | tr -d '"')
 TENANT_ADDRESS=$(op item get $TENANT_ACCOUNT_ID --vault "$OP_VAULT" --fields TENANT_ADDRESS --reveal)
