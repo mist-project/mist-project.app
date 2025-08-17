@@ -1,6 +1,6 @@
 when:
-  - event: [manual, push]
-  - branch: main
+  - event: [push, manual]
+  - branch: [main, feat/prettify-home]
 
 steps:
   - name: Fetch and Initialize Credentials

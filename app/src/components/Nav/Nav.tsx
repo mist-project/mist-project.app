@@ -38,10 +38,10 @@ const Nav = (): JSX.Element => {
 
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="#demo"
+            href="#roadmap"
             className="text-sm px-3 py-1.5 rounded border border-line hover:border-teal/50 hover:text-teal transition"
           >
-            Roadmap
+            Roadmap (add link)
           </a>
           <a
             href="https://github.com/mist-project"
