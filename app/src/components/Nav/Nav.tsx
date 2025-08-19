@@ -1,23 +1,10 @@
 import type { JSX } from "react";
-
-const NavLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: JSX.Element;
-}) => {
-  return (
-    <a
-      href={href}
-      className="px-4 py-1.5 rounded-full text-sm text-ink/70 hover:text-ink hover:bg-line/40 transition"
-    >
-      {children}
-    </a>
-  );
-};
+import { Link } from "react-router";
+import { useLocation } from "react-router";
 
 const Nav = (): JSX.Element => {
+  const location = useLocation();
+
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-base/70 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
@@ -27,22 +14,22 @@ const Nav = (): JSX.Element => {
           </span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-2 p-1 rounded-full bg-panel/80 border border-line shadow-glass">
-          <NavLink href="#features">
-            <>Features</>
-          </NavLink>
-          <NavLink href="#architecture">
-            <>Architecture</>
-          </NavLink>
-        </nav>
-
-        <div className="hidden sm:flex items-center gap-3">
-          <a
-            href="#roadmap"
-            className="text-sm px-3 py-1.5 rounded border border-line hover:border-teal/50 hover:text-teal transition"
-          >
-            Roadmap (add link)
-          </a>
+        <div className="flex items-center gap-3">
+          {location.pathname === "/roadmap" ? (
+            <Link
+              className="text-sm px-3 py-1.5 rounded border border-line hover:border-teal/50 hover:text-teal transition"
+              to="/"
+            >
+              Home
+            </Link>
+          ) : (
+            <Link
+              className="text-sm px-3 py-1.5 rounded border border-line hover:border-teal/50 hover:text-teal transition"
+              to="/roadmap"
+            >
+              Roadmap
+            </Link>
+          )}
           <a
             href="https://github.com/mist-project"
             target="_blank"

@@ -8,6 +8,11 @@
   --color-line: #202737;
   --color-teal: #2DD4BF; /* accents */
   --color-amber: #FBBF24; /* accents */
+  --color-terminal-green: #00ff41;
+  --color-terminal-blue: #0099ff;
+  --color-dark-bg: #0a0a0a; /* dark mode bg */
+  --color-card-bg: #151515; /* dark mode cards */
+  --color-border-gray: #333333; /* dark mode borders */
 
   /* Font Families */
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;

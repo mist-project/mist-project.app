@@ -6,7 +6,7 @@ import Summary from "./Summary";
 
 const Home = (): JSX.Element => {
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="mx-auto max-w-6xl px-4">
       <Summary />
       <Features />
       {/* <TechStack /> */}
