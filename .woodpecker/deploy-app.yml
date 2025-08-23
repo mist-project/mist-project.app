@@ -1,10 +1,13 @@
 when:
-  - event: [manual, push]
-  - branch: main
+  - event: [push, manual]
+  - branch: [main, feat/prettify-home]
 
 steps:
   - name: Fetch and Initialize Credentials
     image: registry.mist-project.app/mist-shared/alpine-ci:latest
+    when:
+      - event: [push, manual]
+      - branch: [main, feat/prettify-home]
     environment:
       OP_SERVICE_ACCOUNT_TOKEN:
         from_secret: OP_TOKEN
@@ -18,6 +21,9 @@ steps:
       - ./helpers/fetch_creds_op.sh
 
   - name: Build react app
+    when:
+      - event: [push, manual]
+      - branch: [main, feat/prettify-home]
     image: node:20-alpine
 
     commands:
@@ -27,6 +33,9 @@ steps:
 
   - name: Deploy app to nginx server
     image: registry.mist-project.app/mist-shared/alpine-ci:latest
+    when:
+      - event: [push, manual]
+      - branch: [main, feat/prettify-home]
     environment:
       ANSIBLE_HOST_KEY_CHECKING: False
     commands:

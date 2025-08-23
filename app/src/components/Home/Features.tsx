@@ -34,12 +34,6 @@ const Features = (): JSX.Element => {
     <section id="features" className="py-14 border-t border-line/70">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">Features</h2>
-        <a
-          href="#repo"
-          className="text-sm text-ink/70 hover:text-teal transition"
-        >
-          See on GitHub →
-        </a>
       </div>
 
       <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -49,7 +43,7 @@ const Features = (): JSX.Element => {
           tags={[]}
         />
         <FeatureCard
-          title="Real-time Channels"
+          title="Real-time Audio and Text Channels"
           description="Low-latency messaging with presence, typing indicators, and read receipts."
           tags={[]}
         />
@@ -63,6 +57,12 @@ const Features = (): JSX.Element => {
         <FeatureCard
           title="Calendar Integration"
           description="Includes a calendar to manage events and deadlines."
+          tags={[]}
+        />
+
+        <FeatureCard
+          title="More to come!"
+          description="Stay tuned for more features and improvements."
           tags={[]}
         />
       </div>
